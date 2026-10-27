@@ -1,0 +1,26 @@
+name: Validate config
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: dtrager02/calendar-block
+          path: app
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Validate config.yaml
+        working-directory: app
+        run: ./mill --no-server blocker.run validate --config "$GITHUB_WORKSPACE/config.yaml"
