@@ -3,12 +3,12 @@ horizonDays: 30                   # how far ahead recurring requests are schedul
 weekStart: MONDAY
 slotStep: 15m                     # candidate start times are this far apart
 allDayEventsBusy: false           # all-day events (holidays, birthdays) don't block time
-owner: me@gmail.com               # default attendee for requests without `attendees`
-publicBaseUrl: https://calendar.jeopardy.fit   # onboarding only; serves /start and /callback
-onboardPort: 8735                 # local port the tunnel forwards to
+owner: dtrager02@gmail.com               # default attendee for requests without `attendees`
+publicBaseUrl: https://calendar.jeopardy.fit
+onboardPort: 8735
 calendarName: Auto Blocks
 userOverrides:
-  me@gmail.com:
+  dtrager02@gmail.com:
     excludeCalendars: []          # calendar IDs to ignore when computing busy time
 
 requests:
@@ -23,10 +23,8 @@ requests:
 
   - id: band-practice
     title: Band practice
-    description: Bring your own picks.   # optional
-    location: Studio 4                   # optional
     priority: 8
-    attendees: [me@gmail.com, b@gmail.com, c@gmail.com]   # first is the organizer
+    attendees: [dtrager02@gmail.com, pcrawler1@gmail.com]   # first is the organizer
     recurrence: weekly
     duration: 2h
     windows:
