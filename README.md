@@ -26,7 +26,7 @@ Add an entry under `requests:`:
 Every option is documented in the [app's README](https://github.com/dtrager02/calendar-block#configuration).
 
 ## Rules of thumb
-- **Everyone in `attendees` must have onboarded first.** Ask the maintainer for an invite link. If anyone hasn't, the event is skipped.
+- **Everyone in `attendees` must connect their Google Calendar first,** at https://calendar.jeopardy.fit. If anyone hasn't, the event is skipped. Connecting again also fixes an expired connection.
 - **Existing calendar events always win.** The app only books free time, and if nothing fits, it books nothing.
 - **Priority.** A higher-priority event can take a slot from a lower-priority one when there's no other free slot, but never from an equal or higher one.
 - **Edits update existing events.** Changing `title`, `description` or `location` updates every upcoming occurrence. Deleting an entry cancels all of its upcoming occurrences.
