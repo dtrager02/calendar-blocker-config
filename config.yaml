@@ -38,3 +38,13 @@ requests:
     duration: 3h
     windows:
       - { days: [SAT, SUN], from: "09:00", to: "17:00" }
+  - id: "test-event-4d72bfec"
+    title: "Test event"
+    priority: 2
+    attendees: ["dtrager02@gmail.com"]
+    recurrence: "weekly"
+    duration: "60m"
+    windows: [{"days":["MON","TUE","SUN"],"from":"18:19","to":"23:29"}]
+    strategies: {"prefer-soonest":1.0,"minimal-gaps":0.0}
+    description: "qwdqwdqwdq"
+    location: "my house"
